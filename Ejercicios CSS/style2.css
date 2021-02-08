@@ -1,0 +1,20 @@
+h1{
+    color: red;
+}
+
+h2{
+    color: blue;
+}
+
+p{
+    text-align: center;
+}
+
+p + h2{
+    color: orange;
+}
+
+p+h2+p{
+    color: blue;
+    font-weight: bold;
+}
