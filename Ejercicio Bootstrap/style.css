@@ -1,0 +1,34 @@
+body{
+    font-weight: bold;
+}
+.col{
+    vertical-align: center;
+}
+p{
+    text-align: center;
+}
+
+#left-menu{
+    background-color: orange;
+}
+
+#top-menu {
+    background-color: #C59083;
+}
+
+.brown-back{
+    background-color: #5C493D;
+    color: white;
+}
+
+.pink-back{
+    background-color: #C86779;
+}
+
+.blue-back{
+    background-color: #00A3B5;
+}
+
+.content{
+    min-height: 10em;
+}
