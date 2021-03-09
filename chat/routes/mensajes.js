@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Joi = require("joi");
-const Mensaje = require("../models/mensaje")
+const Mensaje = require("../models/mensaje");
+const ws = require("../wslib");
 
 const schemaMensajeUpdate = Joi.object({
   message: Joi.string().min(5).required(),
@@ -52,6 +53,8 @@ router.post("/", function (req, res, next){
           author: req.body.author
         }).then(result=>{
           res.send(result);
+          console.log(ws.sendMessages)
+          ws.sendMessages();
         });
       });
 });

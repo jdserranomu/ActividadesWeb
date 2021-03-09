@@ -11,9 +11,10 @@ const renderMessages = (data) => {
 
 const handleSubmit = (evt) => {
     evt.preventDefault();
-    const message = document.getElementById("message");
-    ws.send(message.value);
-    message.value = "";
+    const message = document.getElementById("message").value;
+    const author = document.getElementById("author").value;
+    const timestamp = new Date().getTime();
+    ws.send(JSON.stringify({message, author, timestamp}));
 };
 
 const form = document.getElementById("form");
